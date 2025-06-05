@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* KPDS Design Tokens as CSS Variables */
+  /* Border Radius */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-28: 28px;
+
+  /* Font Size */
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --font-size-36: 36px;
+  --font-size-64: 64px;
+
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Height */
+  --line-height-14: 14px;
+  --line-height-16: 16px;
+  --line-height-18: 18px;
+  --line-height-20: 20px;
+  --line-height-22: 22px;
+  --line-height-26: 26px;
+  --line-height-28: 28px;
+  --line-height-32: 32px;
+  --line-height-36: 36px;
+  --line-height-44: 44px;
+  --line-height-72: 72px;
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-1: 1px;
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-18: 18px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-38: 38px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-160: 160px;
+
+  /* KPDS Color Tokens (Full Palette) */
+  /* Black & White */
+  --color-black-950: rgba(0, 0, 0, 1);
+  --color-black-900: rgba(28, 28, 28, 1);
+  --color-black-alpha-200: rgba(0, 0, 0, 0.7);
+  --color-black-alpha-100: rgba(0, 0, 0, 0.5);
+  --color-black-alpha-50: rgba(0, 0, 0, 0.2);
+  --color-white-0: rgba(255, 255, 255, 1);
+  --color-white-alpha-200: rgba(255, 255, 255, 0.7);
+  --color-white-alpha-100: rgba(255, 255, 255, 0.5);
+  --color-white-alpha-50: rgba(255, 255, 255, 0.2);
+
+  /* Gray */
+  --color-gray-950: rgba(28, 28, 28, 1);
+  --color-gray-900: rgba(34, 34, 34, 1);
+  --color-gray-850: rgba(57, 61, 65, 1);
+  --color-gray-800: rgba(70, 76, 82, 1);
+  --color-gray-700: rgba(86, 94, 103, 1);
+  --color-gray-600: rgba(132, 143, 154, 1);
+  --color-gray-500: rgba(167, 178, 188, 1);
+  --color-gray-400: rgba(188, 196, 204, 1);
+  --color-gray-300: rgba(203, 209, 215, 1);
+  --color-gray-200: rgba(223, 228, 235, 1);
+  --color-gray-100: rgba(236, 239, 243, 1);
+  --color-gray-50: rgba(242, 245, 248, 1);
+
+  /* Purple */
+  --color-purple-950: rgba(95, 0, 128, 1);
+  --color-purple-900: rgba(103, 32, 145, 1);
+  --color-purple-850: rgba(126, 58, 176, 1);
+  --color-purple-800: rgba(141, 76, 196, 1);
+  --color-purple-700: rgba(154, 96, 202, 1);
+  --color-purple-600: rgba(167, 117, 210, 1);
+  --color-purple-500: rgba(180, 137, 216, 1);
+  --color-purple-400: rgba(193, 158, 223, 1);
+  --color-purple-300: rgba(206, 178, 230, 1);
+  --color-purple-200: rgba(220, 199, 237, 1);
+  --color-purple-100: rgba(232, 219, 243, 1);
+  --color-purple-50: rgba(245, 239, 250, 1);
+
+  /* Orange */
+  --color-orange-950: rgba(249, 80, 25, 1);
+  --color-orange-900: rgba(250, 98, 47, 1);
+  --color-orange-850: rgba(251, 115, 70, 1);
+  --color-orange-800: rgba(251, 131, 91, 1);
+  --color-orange-700: rgba(252, 145, 109, 1);
+  --color-orange-600: rgba(252, 161, 130, 1);
+  --color-orange-500: rgba(253, 175, 149, 1);
+  --color-orange-400: rgba(253, 191, 170, 1);
+  --color-orange-300: rgba(253, 205, 188, 1);
+  --color-orange-200: rgba(254, 220, 209, 1);
+  --color-orange-100: rgba(254, 235, 228, 1);
+  --color-orange-50: rgba(255, 246, 243, 1);
+
+  /* Red */
+  --color-red-950: rgba(216, 27, 28, 1);
+  --color-red-900: rgba(226, 45, 46, 1);
+  --color-red-850: rgba(229, 68, 69, 1);
+  --color-red-800: rgba(232, 89, 90, 1);
+  --color-red-700: rgba(235, 108, 109, 1);
+  --color-red-600: rgba(238, 129, 130, 1);
+  --color-red-500: rgba(240, 148, 149, 1);
+  --color-red-400: rgba(243, 169, 169, 1);
+  --color-red-300: rgba(246, 188, 188, 1);
+  --color-red-200: rgba(249, 209, 209, 1);
+  --color-red-100: rgba(251, 228, 228, 1);
+  --color-red-50: rgba(253, 242, 242, 1);
+
+  /* Green */
+  --color-green-950: rgba(17, 139, 102, 1);
+  --color-green-900: rgba(2, 149, 104, 1);
+  --color-green-850: rgba(30, 161, 121, 1);
+  --color-green-800: rgba(55, 171, 136, 1);
+  --color-green-700: rgba(78, 181, 149, 1);
+  --color-green-600: rgba(103, 191, 164, 1);
+  --color-green-500: rgba(126, 201, 178, 1);
+  --color-green-400: rgba(151, 212, 193, 1);
+  --color-green-300: rgba(174, 221, 207, 1);
+  --color-green-200: rgba(199, 232, 222, 1);
+  --color-green-100: rgba(222, 241, 235, 1);
+  --color-green-50: rgba(240, 249, 246, 1);
+
+  /* Mint */
+  --color-mint-950: rgba(48, 178, 207, 1);
+  --color-mint-900: rgba(77, 190, 215, 1);
+  --color-mint-850: rgba(97, 197, 219, 1);
+  --color-mint-800: rgba(114, 204, 223, 1);
+  --color-mint-700: rgba(130, 209, 227, 1);
+  --color-mint-600: rgba(148, 216, 231, 1);
+  --color-mint-500: rgba(164, 222, 235, 1);
+  --color-mint-400: rgba(182, 228, 239, 1);
+  --color-mint-300: rgba(198, 234, 242, 1);
+  --color-mint-200: rgba(216, 241, 246, 1);
+  --color-mint-100: rgba(232, 247, 250, 1);
+  --color-mint-50: rgba(244, 251, 253, 1);
+
+  /* Blue */
+  --color-blue-950: rgba(6, 93, 186, 1);
+  --color-blue-900: rgba(5, 102, 205, 1);
+  --color-blue-850: rgba(33, 119, 211, 1);
+  --color-blue-800: rgba(58, 134, 216, 1);
+  --color-blue-700: rgba(80, 148, 220, 1);
+  --color-blue-600: rgba(105, 163, 225, 1);
+  --color-blue-500: rgba(128, 177, 230, 1);
+  --color-blue-400: rgba(153, 192, 234, 1);
+  --color-blue-300: rgba(175, 206, 239, 1);
+  --color-blue-200: rgba(200, 222, 244, 1);
+  --color-blue-100: rgba(223, 235, 249, 1);
+  --color-blue-50: rgba(240, 246, 252, 1);
+
+  /* Yellow */
+  --color-yellow-950: rgba(222, 167, 2, 1);
+  --color-yellow-900: rgba(237, 178, 0, 1);
+  --color-yellow-850: rgba(239, 186, 28, 1);
+  --color-yellow-800: rgba(241, 194, 54, 1);
+  --color-yellow-700: rgba(242, 201, 76, 1);
+  --color-yellow-600: rgba(244, 209, 102, 1);
+  --color-yellow-500: rgba(246, 216, 125, 1);
+  --color-yellow-400: rgba(248, 223, 150, 1);
+  --color-yellow-300: rgba(249, 230, 173, 1);
+  --color-yellow-200: rgba(251, 238, 199, 1);
+  --color-yellow-100: rgba(253, 245, 222, 1);
+  --color-yellow-50: rgba(254, 250, 240, 1);
+
+  /* Brown */
+  --color-brown-950: rgba(143, 83, 29, 1);
+  --color-brown-900: rgba(158, 92, 31, 1);
+  --color-brown-850: rgba(169, 110, 56, 1);
+  --color-brown-800: rgba(178, 126, 78, 1);
+  --color-brown-700: rgba(187, 141, 98, 1);
+  --color-brown-600: rgba(197, 157, 121, 1);
+  --color-brown-500: rgba(206, 172, 141, 1);
+  --color-brown-400: rgba(215, 188, 163, 1);
+  --color-brown-300: rgba(224, 203, 183, 1);
+  --color-brown-200: rgba(233, 218, 203, 1);
+  --color-brown-100: rgba(242, 233, 223, 1);
+  --color-brown-50: rgba(247, 242, 242, 1);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  /* button {
+    background-color: #f9f9f9;
+  } */
+}
